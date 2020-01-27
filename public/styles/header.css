@@ -1,0 +1,17 @@
+header {
+  height: 400px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top:120px;
+  background-color: rgb(255, 166, 0);
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+header h2 {
+  margin: 0;
+}
+
+header div {
+  text-align: center;
+}
