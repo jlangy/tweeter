@@ -1,0 +1,32 @@
+form{
+  font-family: 'Bungee';
+}
+
+form textarea{
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none;
+  resize: none;
+  border-bottom: 2px solid #545149;
+  height: 2em;
+  margin-bottom: .5em;
+  padding-bottom: .5em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: #545149;
+}
+
+::placeholder{
+  opacity: 1;
+}
+
+form input{
+  background-color: #4056A1;
+  border: none;
+  color: white;
+  padding: 5px;
+}
+
+form span {
+  float: right;
+}
