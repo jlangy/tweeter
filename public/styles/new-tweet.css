@@ -1,8 +1,8 @@
-.add-tweet-form{
+#add-tweet-form{
   font-family: 'Bungee';
 }
 
-.add-tweet-form textarea{
+#add-tweet-form textarea{
   background-color: #f4f1ec;
   width: 100%;
   border: none;
@@ -16,18 +16,18 @@
   color: #545149;
 }
 
-.add-tweet-form input{
+#add-tweet-form input{
   background-color: #4056A1;
   border: none;
   color: white;
   padding: 5px;
 }
 
-.add-tweet-form span {
+#add-tweet-form span {
   float: right;
 }
 
-.new-tweet article{
+.tweet-article{
   border: 3px solid #545149;
   padding: 10px;
   margin-top: 20px;
@@ -47,18 +47,18 @@
   padding: 0 20px;
 }
 
-.new-tweet img{
+.tweet-article img{
   height: 50px;
   width: 50px;
 }
 
-.new-tweet header{
+.tweet-article header{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.new-tweet header>span{
+.tweet-article header>span{
   display: flex;
   justify-content: space-between;
   align-items: center;
