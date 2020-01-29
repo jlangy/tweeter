@@ -30,27 +30,43 @@
 const MAX_TWEET_LENGTH = 140;
 
 const createTweetElement = function(tweetData){
+  console.log(tweetData);
   const daysAgoCreated = Math.round((Date.now() - new Date(tweetData.created_at)) / 86400000);
-  return `<article class="tweet-article">
- 
-            <header>
-              <span><img src="${tweetData.user.avatars}" alt="profile picture">${tweetData.user.name}</span>
-              <span class="handle">${tweetData.user.handle}</span>
-            </header>
-  
-            <p>${tweetData.content.text}</p>
-  
-            <footer>
-              <span>${daysAgoCreated} days ago</span>
-              <span>abc</span>
-            </footer>
- 
-          </article>`
+  const $avatar = $('<span>')
+                    .text(tweetData.user.name)
+                    .prepend($('<img/>')
+                    .attr({'src':tweetData.user.avatars, "alt":"profile picture"}))
+
+
+  const $header = $('<header>')
+                    .append($avatar)
+                    .append($('<span>')
+                    .addClass('handle')
+                    .text(tweetData.user.handle));
+
+  const $p = $('<p>').text(tweetData.content.text);
+
+  const $footer = $('<footer>')
+                    .append($('<span>')
+                    .text(`${daysAgoCreated} days ago`))
+                    .append($('<span>')
+                    .text('abc'));
+
+  return $('<article>')
+          .addClass('tweet-article')
+          .append($header)
+          .append($p)
+          .append($footer);
 }
 
 const renderTweets = function(tweetData){
+  //clear out previous tweets
+  const articleContainer = $('#articles-container');
+  articleContainer.empty();
+
+  //add new tweets
   tweetData.forEach(function(tweet){
-    $('.add-tweet-form').after(createTweetElement(tweet));
+    articleContainer.prepend(createTweetElement(tweet));
   });
 }
 
@@ -71,6 +87,7 @@ const addSubmitListener = function(){
     $.ajax("/tweets", {method: "POST", data: tweetTextInput.serialize()})
       .then(function(){
         tweetTextInput.val('');
+        loadTweets();
       });
   });
 }
@@ -83,7 +100,6 @@ const loadTweets = function(){
 }
 
 $(document).ready(function(){
-  // renderTweets(data);
   addSubmitListener();
   loadTweets();
 });
