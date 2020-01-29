@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function(){
   $('#tweet-text').on('keyup', function(event){
     const textArea = $(this);
     const counter = textArea.siblings('span');
