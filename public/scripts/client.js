@@ -53,6 +53,18 @@ const renderTweets = function(tweetData){
   });
 }
 
+const addSubmitListener = function(){
+  $('.add-tweet-form').submit(function(event){
+    event.preventDefault();
+    const tweetTextInput = $('#tweet-text');
+    $.ajax("/tweets", {method: "POST", data: tweetTextInput.serialize()})
+      .then(function(){
+        tweetTextInput.val('');
+      });
+  });
+}
+
 $(document).ready(function(){
   renderTweets(data);
+  addSubmitListener();
 });
