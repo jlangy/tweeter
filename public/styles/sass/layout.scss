@@ -38,10 +38,22 @@ main {
 
 #alert{
   margin: auto;
+  margin-top: 10px;
   border: 2px solid $danger-colour;
   width: $main-width;
   color: var(--danger-colour);
+  display: flex;
+  justify-content: space-between;
+
+  img{
+    height:40px;
+    width: 40px;
+    align-self: center;
+  }
+
 }
+
+
 
 #alert-msg{
   margin: 0;

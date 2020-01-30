@@ -1,3 +1,4 @@
+//Handle text input into the tweet form, putting appropriate class on the counter
 $(document).ready(function(){
   $('#tweet-text').on('keyup', function(event){
     const textArea = $(this);

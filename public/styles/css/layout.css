@@ -29,9 +29,16 @@ main {
 
 #alert {
   margin: auto;
+  margin-top: 10px;
   border: 2px solid red;
   width: 90%;
-  color: var(--danger-colour); }
+  color: var(--danger-colour);
+  display: flex;
+  justify-content: space-between; }
+  #alert img {
+    height: 40px;
+    width: 40px;
+    align-self: center; }
 
 #alert-msg {
   margin: 0;
@@ -80,6 +87,11 @@ nav {
 
 #add-tweet-form {
   font-family: "Bungee"; }
+  #add-tweet-form input {
+    background-color: #4056A1;
+    border: none;
+    padding: 10px;
+    color: #f4f1ec; }
 
 #form-articles-container {
   width: 90%;
@@ -97,12 +109,6 @@ nav {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   color: #545149; }
-
-#add-tweet-form input {
-  background-color: #4056A1;
-  border: none;
-  padding: 10px;
-  color: #f4f1ec; }
 
 #counter {
   float: right; }
@@ -125,7 +131,7 @@ nav {
   justify-content: space-between;
   padding: 0 20px; }
 
-.tweet-article img {
+.tweet-article > img {
   height: 50px;
   width: 50px; }
 
@@ -152,6 +158,11 @@ nav {
 
 .tweet-article:hover .handle {
   visibility: visible; }
+
+.icon {
+  height: 10px;
+  width: 10px;
+  padding-left: 1px; }
 
 #page-header-container {
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");

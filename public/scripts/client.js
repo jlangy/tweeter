@@ -6,6 +6,7 @@
 const MAX_TWEET_LENGTH = 140;
 const NAV_HEIGHT = 120;
 
+//Builds and returns html for a tweet article
 const createTweetElement = function(tweetData){
   const daysAgoCreated = Math.round((Date.now() - new Date(tweetData.created_at)) / 86400000);
   const $avatar = $('<span>')
@@ -19,13 +20,15 @@ const createTweetElement = function(tweetData){
                     .addClass('handle')
                     .text(tweetData.user.handle));
 
-  const $p = $('<p>').addClass('tweet-content').text(tweetData.content.text);
+  const $p = $('<p>')
+              .addClass('tweet-content')
+              .text(tweetData.content.text);
 
   const $footer = $('<footer>')
                     .append($('<span>')
                     .text(`${daysAgoCreated} days ago`))
                     .append($('<span>')
-                    .text('abc'));
+                    .html(`<img class="icon" src="images/noun_Flag_2626361.png"><img class="icon" src="images/noun_Retweet_1077387.png"><img class="icon" src="images/noun_Heart_2089014.png">`));
 
   return $('<article>')
           .addClass('tweet-article')
@@ -85,6 +88,7 @@ const toggleForm = function (event) {
   $('#alert').slideUp(500);
 }
 
+//Goes to top of form and displays tweet form and button
 const goToTop = function(){
   $('html').animate({
     'scrollTop': 0
@@ -94,6 +98,8 @@ const goToTop = function(){
     $('#tweet-text').focus();
   });
 }
+
+//Show the go to top button and hide form button
 
 const displayJumpToTopBtn = function(){
   if($(window).scrollTop() > 0){
