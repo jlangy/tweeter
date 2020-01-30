@@ -7,9 +7,44 @@ nav{
   background-color: #4056A1;
   color: #FFFFFF;
   padding: 2em;
+  display: flex;
+  justify-content: space-between;
 }
 
 nav span {
   font-family: 'Bungee';
   font-size: 1.75em;
+}
+
+#scroll-btn-container{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
+}
+
+#scroll-btn-container span{
+  font-family: "Source Sans Pro", sans-serif;
+  font-size:1em;
+}
+
+#scroll-btn{
+  width: 30px;
+  height: 30px;
+  font-size: 2em;
+  animation: bounce 1.5s infinite;
+  position: relative;
+}
+
+@keyframes bounce {
+  0%{
+    top: 0;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0;
+  }
 }

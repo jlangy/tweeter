@@ -77,13 +77,11 @@ const loadTweets = function(){
 const setScrollListener = function (event) {
   let location = $(window).scrollTop();
   let formLocation = $('#compose-tweet').offset().top - NAV_HEIGHT;
-  if(Math.abs(location - formLocation) > 1){
-    location = formLocation;
-  } else {
-    location = $('#articles-container').offset().top - NAV_HEIGHT;
-  }
-  $('html, body').stop().animate({
-    'scrollTop': location
+  let articlesLocation = $('#articles-container').offset().top - NAV_HEIGHT;
+  const distanceFromForm = Math.abs(location - formLocation)
+  let scrollTo = (distanceFromForm < 1) ?  articlesLocation: formLocation;
+  $('html, body').animate({
+    'scrollTop': scrollTo
   }, 300, 'swing');
 }
 
