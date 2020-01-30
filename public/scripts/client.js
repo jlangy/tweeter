@@ -52,17 +52,20 @@ const addSubmitListener = function(){
     const tweetLength = tweetTextInput.val().length;
     
     //handle errors
+    $('#alert').slideUp(500);
     if(tweetLength > MAX_TWEET_LENGTH){
-      return alert(`This tweet is more than ${MAX_TWEET_LENGTH} characters. Please be more pithy.`)
+      $('#alert-msg').text(`The tweet must be less than ${MAX_TWEET_LENGTH} characters, please be more pithy.`);
+      return $('#alert').slideDown();
     } else if (tweetLength === 0){
-      return alert('Please enter some text to tweet.');
+      $('#alert-msg').text(`Please write something below in order to send a tweet.`);
+      return $('#alert').slideDown();
     }
-
     //post tweet and reset
     $.ajax("/tweets", {method: "POST", data: tweetTextInput.serialize()})
       .then(function(){
         tweetTextInput.val('');
         loadTweets();
+        $('.counter').text(MAX_TWEET_LENGTH);
       });
   });
 }
@@ -74,9 +77,10 @@ const loadTweets = function(){
     });
 }
 
-//scrolls to the form if not on it, top of articles otherwise.
-const setScrollListener = function (event) {
+
+const toggleForm = function (event) {
   $('#compose-tweet').slideToggle(500);
+  $('#alert').slideUp(500);
 }
 
 const goToTop = function(){
@@ -99,10 +103,10 @@ const displayJumpToTopBtn = function(){
 }
 
 $(document).ready(function(){
-  $(window).scrollTop(0);
-  addSubmitListener();
+  $('#alert').hide();
   loadTweets();
-  $('#scroll-btn').on('click', setScrollListener);
-  $(window).scroll(displayJumpToTopBtn);
+  addSubmitListener();
   $('#scroll-top-btn').on('click', goToTop);
+  $('#toggle-form-btn').on('click', toggleForm);
+  $(window).scroll(displayJumpToTopBtn);
 });

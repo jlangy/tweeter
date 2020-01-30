@@ -1,16 +1,14 @@
-body>header {
-  height: 400px;
-  position: absolute;
+#page-header {
+  height: var(--header-height);
+  position: relative;
+  top: var(--nav-height);
   width: 100%;
-  top:120px;
-  background-color: rgb(255, 166, 0);
+  background-color: var(--header-colour);
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 header h2 {
   margin: 0;
-}
-
-header div {
-  text-align: center;
 }

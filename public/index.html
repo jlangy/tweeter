@@ -25,24 +25,35 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <span class="brand">tweeter</span>
     <div id="scroll-btn-container">
       <span><strong>Write</strong> a new tweet</span>
-      <img id='scroll-btn' src="images/profile-hex.png" alt="">
+      <img id='toggle-form-btn' src="images/profile-hex.png" alt="">
     </div>
   </nav>
 
-  <header>
-    <div><img src="/images/profile-hex.png" alt=""></div>
+  <!-- <aside class="alert">
+    <span class='error-text'><strong class="error-name">Error! Error!</strong>You have encountered an error.</span>
+    <img class="exit-btn" src="images/profile-hex.png" alt="">
+  </aside> -->
+
+  <header id='page-header'>
+    <img src="/images/profile-hex.png" alt="profile picture">
     <br>
     <div>
       <h2>John Doe</h2>
     </div>
   </header>
 
+  <div id="clear"></div>
+
   <!-- Page-specific (main) content here -->
   <main class="container">
 
+    <aside id="alert">
+      <p id="alert-msg"></p>
+    </aside>
+    
     <section id="compose-tweet">
 
       <h2>Compose Tweet</h2>
@@ -50,12 +61,11 @@
       <form id="add-tweet-form" action="tweets" method="POST">
         <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <span id="counter">140</span>
       </form>
 
     </section>
     
-
     <section id="articles-container">
       
       <article class="tweet-article">
@@ -65,7 +75,7 @@
           <span class="handle">@handle</span>
         </header>
 
-        <p>If I have seen further it is by standing on the shoulder of giants</p>
+        <p id='tweet-content'>If I have seen further it is by standing on the shoulder of giants</p>
 
         <footer>
           <span>10 days ago</span>

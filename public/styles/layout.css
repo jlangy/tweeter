@@ -14,11 +14,24 @@ html {
  * Global layout stuff
  */
 
+:root{
+  --nav-height: 120px;
+  --header-height: 400px;
+  --nav-colour: #4056A1;
+  --primary-font-colour: #545149;
+  --secondary-font-colour: #f4f1ec;
+  --header-colour: rgb(255, 166, 0);
+  --danger-colour: red;
+  --primary-font-family: "Source Sans Pro", sans-serif;
+  --secondary-font-family: "Bungee";
+}
+
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: var(--primary-font-colour);
+  background-color: var(--secondary-font-colour);
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--primary-font-family);
   box-sizing: border-box;
 }
 
@@ -26,19 +39,33 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
-   position: relative;
-   top: 520px;
-   width: 90%;
-   margin: auto;
-   background-color: #f4f1ec;
- }
+main {
+  width: 90%;
+  margin: auto;
+  background-color: var(--secondary-font-colour);
+}
 
- #scroll-top-btn{
-   width: 100px;
-   height: 100px;
-   position: fixed;
-   bottom: 10px;
-   right: 10px;
-   visibility: hidden;
- }
+#scroll-top-btn{
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden;
+}
+
+#alert{
+  margin: auto;
+  border: 2px solid var(--danger-colour);
+  width: 90%;
+  color: var(--danger-colour);
+}
+
+#alert-msg{
+  margin: 0;
+  padding: 10px;
+}
+
+#clear{
+  height: var(--nav-height);
+}
