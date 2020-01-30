@@ -1,0 +1,189 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif; }
+
+main {
+  display: flex;
+  flex-direction: column; }
+
+#scroll-top-btn {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden; }
+
+#alert {
+  margin: auto;
+  border: 2px solid red;
+  width: 90%;
+  color: var(--danger-colour); }
+
+#alert-msg {
+  margin: 0;
+  padding: 10px; }
+
+#clear {
+  height: 120px; }
+
+nav {
+  background-color: #ffa600;
+  color: #f4f1ec;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  padding: 0.75em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+  nav .brand {
+    font-family: "Bungee";
+    font-size: 1.25em; }
+  nav #toggle-form-btn-container {
+    align-items: center;
+    bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 0.75em; }
+    nav #toggle-form-btn-container #toggle-form-btn {
+      width: 30px;
+      height: 30px;
+      animation: bounce 1.5s infinite;
+      position: relative;
+      opacity: 0.8; }
+    nav #toggle-form-btn-container #toggle-form-btn:hover {
+      opacity: 1; }
+
+@keyframes bounce {
+  0% {
+    top: 0; }
+  50% {
+    top: 5px; }
+  100% {
+    top: 0; } }
+
+#add-tweet-form {
+  font-family: "Bungee"; }
+
+#form-articles-container {
+  width: 90%;
+  align-self: center; }
+
+#tweet-text {
+  background-color: #f4f1ec;
+  width: 100%;
+  border: none;
+  resize: none;
+  border-bottom: 2px solid #545149;
+  height: 2em;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+  color: #545149; }
+
+#add-tweet-form input {
+  background-color: #4056A1;
+  border: none;
+  padding: 10px;
+  color: #f4f1ec; }
+
+#counter {
+  float: right; }
+
+.tweet-content {
+  border-bottom: 3px solid #545149;
+  padding: 20px;
+  margin-bottom: 5px; }
+
+.tweet-article {
+  border: 3px solid #545149;
+  padding: 10px;
+  margin-top: 20px;
+  opacity: 0.8;
+  overflow: hidden; }
+
+.tweet-article > footer {
+  font-size: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px; }
+
+.tweet-article img {
+  height: 50px;
+  width: 50px; }
+
+.tweet-article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.tweet-article header > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.danger-text {
+  color: red; }
+
+.tweet-article:hover {
+  opacity: 1;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.2); }
+
+.handle {
+  visibility: hidden;
+  opacity: 0.5; }
+
+.tweet-article:hover .handle {
+  visibility: visible; }
+
+#page-header-container {
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  text-align: center;
+  margin-bottom: 10px; }
+
+#page-header-content {
+  background-color: #ffa600; }
+
+header h2 {
+  margin: 0; }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1; }
+  #form-articles-container {
+    width: 57.5%;
+    float: right;
+    margin-right: 2.5%; }
+  .container {
+    display: block; }
+  #page-header-container {
+    position: fixed;
+    top: 200px;
+    width: 40%; }
+  #page-header-content {
+    width: 350px;
+    height: 350px;
+    margin: auto; }
+  nav {
+    padding: 2em; }
+  .brand {
+    font-size: 1.75em; }
+  #toggle-form-btn-container {
+    font-size: 1em; } }

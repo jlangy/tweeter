@@ -1,31 +1,31 @@
 #add-tweet-form{
-  font-family: var(--secondary-font-family);
+  font-family: $secondary-font-family;
+
+  input{
+    background-color: $nav-colour;
+    border: none;
+    padding: 10px;
+    color: $secondary-font-colour;
+  }
 }
 
 #form-articles-container{
-  width: 90%;
+  width: $main-width;
   align-self: center;
 }
 
 #tweet-text{
-  background-color: var(--secondary-font-colour);
+  background-color: $secondary-font-colour;
   width: 100%;
   border: none;
   resize: none;
-  border-bottom: 2px solid var(--primary-font-colour);
+  border-bottom: 2px solid $primary-font-colour;
   height: 2em;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: $primary-font-family;
   font-weight: 700;
-  color: var(--primary-font-colour);
-}
-
-#add-tweet-form input{
-  background-color: var(--nav-colour);
-  border: none;
-  padding: 10px;
-  color: var(--secondary-font-colour)
+  color: $primary-font-colour;
 }
 
 #counter {
@@ -33,13 +33,13 @@
 }
 
 .tweet-content {
-  border-bottom: 3px solid var(--primary-font-colour);
+  border-bottom: 3px solid $primary-font-colour;
   padding: 20px;
   margin-bottom: 5px;
 }
 
 .tweet-article{
-  border: 3px solid var(--primary-font-colour);
+  border: 3px solid $primary-font-colour;
   padding: 10px;
   margin-top: 20px;
   opacity: 0.8;
@@ -71,7 +71,7 @@
 }
 
 .danger-text {
-  color: var(--danger-colour);
+  color: $danger-colour;
 }
 
 .tweet-article:hover{

@@ -4,17 +4,15 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   <!-- External CSS -->
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:400,400i,700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css">
-  <link rel="stylesheet" href="/styles/media.css">
+  <link rel="stylesheet" href="/styles/css/layout.css" type="text/css" />
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
@@ -27,70 +25,68 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="brand">tweeter</span>
-    <div id="scroll-btn-container">
+    <div id="toggle-form-btn-container">
       <span><strong>Write</strong> a new tweet</span>
       <img id='toggle-form-btn' src="images/profile-hex.png" alt="">
     </div>
   </nav>
-
-  <!-- <aside class="alert">
-    <span class='error-text'><strong class="error-name">Error! Error!</strong>You have encountered an error.</span>
-    <img class="exit-btn" src="images/profile-hex.png" alt="">
-  </aside> -->
-
-  <header id='page-header'>
-    <div id="header-background">
-      <img src="/images/profile-hex.png" alt="profile picture">
-      <br>
-      <div>
-        <h2>John Doe</h2>
-      </div>
-    </div>
-  </header>
-
   <div id="clear"></div>
 
-  <!-- Page-specific (main) content here -->
   <main class="container">
 
-    <aside id="alert">
-      <p id="alert-msg"></p>
-    </aside>
-    
-    <section id="compose-tweet">
+    <header id='page-header-container'>
+      <div id="page-header-content">
+        <img src="/images/profile-hex.png" alt="profile picture">
+        <br>
+        <div>
+          <h2>John Doe</h2>
+        </div>
+      </div>
+    </header>
 
-      <h2>Compose Tweet</h2>
 
-      <form id="add-tweet-form" action="tweets" method="POST">
-        <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span id="counter">140</span>
-      </form>
+    <!-- Page-specific (main) content here -->
+    <div id="form-articles-container">
 
-    </section>
-    
-    <section id="articles-container">
-      
-      <article class="tweet-article">
+      <aside id="alert">
+        <p id="alert-msg"></p>
+      </aside>
 
-        <header>
-          <span><img src="images/profile-hex.png" alt="">Newton</span>
-          <span class="handle">@handle</span>
-        </header>
+      <section id="compose-tweet">
 
-        <p id='tweet-content'>If I have seen further it is by standing on the shoulder of giants</p>
+        <h2>Compose Tweet</h2>
 
-        <footer>
-          <span>10 days ago</span>
-          <span>abc</span>
-        </footer>
+        <form id="add-tweet-form" action="tweets" method="POST">
+          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span id="counter">140</span>
+        </form>
 
-      </article>
-    
-    </section>
+      </section>
 
-    <button><img id="scroll-top-btn" src="images/profile-hex.png" alt="scroll to top"></button>
+      <section id="articles-container">
 
+        <article class="tweet-article">
+
+          <header>
+            <span><img src="images/profile-hex.png" alt="">Newton</span>
+            <span class="handle">@handle</span>
+          </header>
+
+          <p class='tweet-content'>If I have seen further it is by standing on the shoulder of giants</p>
+
+          <footer>
+            <span>10 days ago</span>
+            <span>abc</span>
+          </footer>
+
+        </article>
+
+      </section>
+
+      <button><img id="scroll-top-btn" src="images/profile-hex.png" alt="scroll to top"></button>
+
+    </div>
 
   </main>
 

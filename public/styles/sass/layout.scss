@@ -1,0 +1,58 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+ @import 'vars';
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $primary-font-colour;
+  background-color: $secondary-font-colour;
+  font-size: 24px;
+  font-family: $primary-font-family;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#scroll-top-btn{
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  visibility: hidden;
+}
+
+#alert{
+  margin: auto;
+  border: 2px solid $danger-colour;
+  width: $main-width;
+  color: var(--danger-colour);
+}
+
+#alert-msg{
+  margin: 0;
+  padding: 10px;
+}
+
+#clear{
+  height: $nav-height;
+}
+
+@import 'nav';
+@import 'new-tweet';
+@import 'header';
+@import 'media';

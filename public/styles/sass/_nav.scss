@@ -1,0 +1,50 @@
+nav{
+  background-color: $header-colour;
+  color: $secondary-font-colour;
+  display: flex;
+  height: $nav-height;
+  justify-content: space-between;
+  padding: 0.75em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  
+  .brand {
+    font-family: $secondary-font-family;
+    font-size: 1.25em;
+  }
+
+  #toggle-form-btn-container{
+    align-items: center;
+    bottom: 10px;
+    display: flex;
+    flex-flow: column;
+    font-family: $primary-font-family;
+    font-size: 0.75em;
+    
+    #toggle-form-btn{
+      width: 30px;
+      height: 30px;
+      animation: bounce 1.5s infinite;
+      position: relative;
+      opacity: 0.8;
+    }
+    
+    #toggle-form-btn:hover{
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes bounce {
+  0%{
+    top: 0;
+  }
+  50% {
+    top: 5px;
+  }
+  100% {
+    top: 0;
+  }
+}

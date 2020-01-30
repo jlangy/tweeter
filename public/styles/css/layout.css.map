@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../sass/layout.scss","../sass/_vars.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAAA;AAQA;EACE;;;AAGF;EACE;;;AAGF;EACE,OCdoB;EDepB,kBCdsB;EDetB;EACA,aCboB;;;ADgBtB;EACE,kBCpBsB;EDqBtB;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;;AAGF;EACE;EACA;EACA,OChCW;EDiCX;;;AAGF;EACE;EACA;;;AAGF;EACE,QCnDW","file":"layout.css"}

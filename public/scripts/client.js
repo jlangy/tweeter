@@ -19,7 +19,7 @@ const createTweetElement = function(tweetData){
                     .addClass('handle')
                     .text(tweetData.user.handle));
 
-  const $p = $('<p>').text(tweetData.content.text);
+  const $p = $('<p>').addClass('tweet-content').text(tweetData.content.text);
 
   const $footer = $('<footer>')
                     .append($('<span>')
@@ -79,7 +79,9 @@ const loadTweets = function(){
 
 
 const toggleForm = function (event) {
-  $('#compose-tweet').slideToggle(500);
+  $('#compose-tweet').slideToggle(500, function(){
+      $('#tweet-text').focus();
+  });
   $('#alert').slideUp(500);
 }
 
@@ -88,17 +90,18 @@ const goToTop = function(){
     'scrollTop': 0
   }, 500, 'swing', () => {
     $('#scroll-top-btn').css('visibility', 'hidden');
-    $('#scroll-btn-container').css('visibility', 'visible');
+    $('#toggle-form-btn-container').css('visibility', 'visible');
+    $('#tweet-text').focus();
   });
 }
 
 const displayJumpToTopBtn = function(){
   if($(window).scrollTop() > 0){
     $('#scroll-top-btn').css('visibility', 'visible');
-    $('#scroll-btn-container').css('visibility', 'hidden');
+    $('#toggle-form-btn-container').css('visibility', 'hidden');
   } else {
     $('#scroll-top-btn').css('visibility', 'hidden');
-    $('#scroll-btn-container').css('visibility', 'visible');
+    $('#toggle-form-btn-container').css('visibility', 'visible');
   }
 }
 

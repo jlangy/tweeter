@@ -40,9 +40,9 @@ body {
  */
 
 main {
-  width: 90%;
-  margin: auto;
   background-color: var(--secondary-font-colour);
+  display: flex;
+  flex-direction: column;
 }
 
 #scroll-top-btn{

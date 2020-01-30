@@ -1,15 +1,16 @@
 @media only screen and (min-width: 1024px){
   nav{
-    background-color: var(--nav-colour);
-  }
-  .container {
-    display: block;
+    background-color: $nav-colour;
   }
 
   #form-articles-container{
     width: 57.5%;
     float: right;
     margin-right: 2.5%;
+  }
+
+  .container{
+    display: block;
   }
   
   #page-header-container{
@@ -26,12 +27,11 @@
     padding: 2em;
   }
 
-.brand {
-  font-family: var(--secondary-font-family);
-  font-size: 1.75em;
-}
+  .brand {
+    font-size: 1.75em;
+  }
 
-#toggle-form-btn-container{
-  font-size: 1em;
+  #toggle-form-btn-container{
+    font-size: 1em;
   }
 }
