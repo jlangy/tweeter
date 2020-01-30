@@ -35,7 +35,13 @@ nav span {
   font-size: 2em;
   animation: bounce 1.5s infinite;
   position: relative;
+  opacity: 0.9;
 }
+
+#scroll-btn:hover{
+  opacity: 1;
+}
+
 
 @keyframes bounce {
   0%{

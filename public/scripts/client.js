@@ -74,15 +74,28 @@ const loadTweets = function(){
     });
 }
 
+//scrolls to the form if not on it, top of articles otherwise.
 const setScrollListener = function (event) {
-  let location = $(window).scrollTop();
-  let formLocation = $('#compose-tweet').offset().top - NAV_HEIGHT;
-  let articlesLocation = $('#articles-container').offset().top - NAV_HEIGHT;
-  const distanceFromForm = Math.abs(location - formLocation)
-  let scrollTo = (distanceFromForm < 1) ?  articlesLocation: formLocation;
-  $('html, body').animate({
-    'scrollTop': scrollTo
-  }, 300, 'swing');
+  $('#compose-tweet').slideToggle(500);
+}
+
+const goToTop = function(){
+  $('html').animate({
+    'scrollTop': 0
+  }, 500, 'swing', () => {
+    $('#scroll-top-btn').css('visibility', 'hidden');
+    $('#scroll-btn-container').css('visibility', 'visible');
+  });
+}
+
+const displayJumpToTopBtn = function(){
+  if($(window).scrollTop() > 0){
+    $('#scroll-top-btn').css('visibility', 'visible');
+    $('#scroll-btn-container').css('visibility', 'hidden');
+  } else {
+    $('#scroll-top-btn').css('visibility', 'hidden');
+    $('#scroll-btn-container').css('visibility', 'visible');
+  }
 }
 
 $(document).ready(function(){
@@ -90,4 +103,6 @@ $(document).ready(function(){
   addSubmitListener();
   loadTweets();
   $('#scroll-btn').on('click', setScrollListener);
+  $(window).scroll(displayJumpToTopBtn);
+  $('#scroll-top-btn').on('click', goToTop);
 });
