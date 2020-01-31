@@ -68,7 +68,7 @@ const addSubmitListener = function(){
       .then(function(){
         tweetTextInput.val('');
         loadTweets();
-        $('.counter').text(MAX_TWEET_LENGTH);
+        $('#counter').text(MAX_TWEET_LENGTH);
       });
   });
 }
