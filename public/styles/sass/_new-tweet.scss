@@ -5,7 +5,7 @@
     background-color: $nav-colour;
     border: none;
     padding: 10px;
-    color: $secondary-font-colour;
+    color: $background-color;
   }
 }
 
@@ -15,7 +15,7 @@
 }
 
 #tweet-text{
-  background-color: $secondary-font-colour;
+  background-color: $background-color;
   width: 100%;
   border: none;
   resize: none;

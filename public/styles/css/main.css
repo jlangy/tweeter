@@ -49,11 +49,13 @@ main {
   padding: 10px; }
 
 nav {
-  background-color: #ffa600;
-  color: #f4f1ec;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
   display: flex;
   height: 120px;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
   padding: 0.75em;
   width: 100%;
   z-index: 1;
@@ -170,7 +172,9 @@ nav {
 
 #page-header-content {
   background-color: #ffa600;
-  background-image: url("../../images/asfalt-light.png"); }
+  background-image: url("../../images/asfalt-light.png");
+  height: 400px;
+  padding-top: 80px; }
 
 header h2 {
   margin: 0; }
@@ -195,7 +199,8 @@ header h2 {
   #page-header-content {
     width: 350px;
     height: 350px;
-    margin: auto; }
+    margin: auto;
+    padding-top: 10px; }
   nav {
     padding: 2em;
     background-image: none; }
