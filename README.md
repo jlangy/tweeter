@@ -4,8 +4,8 @@ Tweeter is a front end design for a web app similar to twitter.
 
 ## Final Product
 
-!['Single URL'](https://github.com/jlangy/tinyapp/blob/master/docs/singleURL.png)
-!['All URLs'](https://github.com/jlangy/tinyapp/blob/master/docs/urlsIndex.png)
+!['Desktop Display'](https://github.com/jlangy/tweeter/blob/master/docs/full-size.png)
+!['Mobile Display'](https://github.com/jlangy/tweeter/blob/master/docs/mobile.png)
 
 ## Dependencies
 - Node.js
