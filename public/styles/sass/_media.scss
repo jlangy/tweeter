@@ -1,12 +1,18 @@
 @media only screen and (min-width: 1024px){
   nav{
     background-color: $nav-colour;
+    position: fixed;
+    top: 0;
   }
 
   #form-articles-container{
     width: 57.5%;
     float: right;
     margin-right: 2.5%;
+  }
+  
+  #clear{
+    display: block;
   }
 
   .container{

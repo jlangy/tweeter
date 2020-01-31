@@ -53,16 +53,16 @@ main {
 
 }
 
-
+#clear{
+  height: 120px;
+  display: none;
+}
 
 #alert-msg{
   margin: 0;
   padding: 10px;
 }
 
-#clear{
-  height: $nav-height;
-}
 
 @import 'nav';
 @import 'new-tweet';

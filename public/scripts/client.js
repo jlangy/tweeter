@@ -113,6 +113,7 @@ const displayJumpToTopBtn = function(){
 
 $(document).ready(function(){
   $('#alert').hide();
+  $('#compose-tweet').hide();
   loadTweets();
   addSubmitListener();
   $('#scroll-top-btn').on('click', goToTop);

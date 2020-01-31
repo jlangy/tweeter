@@ -40,12 +40,13 @@ main {
     width: 40px;
     align-self: center; }
 
+#clear {
+  height: 120px;
+  display: none; }
+
 #alert-msg {
   margin: 0;
   padding: 10px; }
-
-#clear {
-  height: 120px; }
 
 nav {
   background-color: #ffa600;
@@ -54,8 +55,6 @@ nav {
   height: 120px;
   justify-content: space-between;
   padding: 0.75em;
-  position: fixed;
-  top: 0;
   width: 100%;
   z-index: 1;
   background-image: url("../../images/asfalt-light.png"); }
@@ -178,11 +177,15 @@ header h2 {
 
 @media only screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1; }
+    background-color: #4056A1;
+    position: fixed;
+    top: 0; }
   #form-articles-container {
     width: 57.5%;
     float: right;
     margin-right: 2.5%; }
+  #clear {
+    display: block; }
   .container {
     display: block; }
   #page-header-container {
