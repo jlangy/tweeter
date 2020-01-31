@@ -4,7 +4,9 @@ Tweeter is a front end design for a web app similar to twitter.
 
 ## Final Product
 
+### Full-Size Layout
 !['Desktop Display'](https://github.com/jlangy/tweeter/blob/master/docs/full-size.png)
+### Mobile Layout
 !['Mobile Display'](https://github.com/jlangy/tweeter/blob/master/docs/mobile.png)
 
 ## Dependencies
